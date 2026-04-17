@@ -1,0 +1,24 @@
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <div class="footer-col">
+      <p class="footer-title">LANCA</p>
+      <p class="footer-text">Laboratory for Analytical and Computational Aerodynamics</p>
+      <p class="footer-text">School for Engineering of Matter, Transport and Energy</p>
+      <p class="footer-text">Arizona State University</p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Contact</p>
+      <p class="footer-text">{{ site.pi.office }}</p>
+      <p class="footer-text"><a href="mailto:{{ site.pi.email }}">{{ site.pi.email }}</a></p>
+    </div>
+    <div class="footer-col">
+      <p class="footer-title">Links</p>
+      <p class="footer-text"><a href="{{ site.pi.asu_profile }}">ASU profile</a></p>
+      {% if site.pi.google_scholar %}<p class="footer-text"><a href="{{ site.pi.google_scholar }}">Google Scholar</a></p>{% endif %}
+      {% if site.pi.github %}<p class="footer-text"><a href="https://github.com/{{ site.pi.github }}">GitHub</a></p>{% endif %}
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; {{ site.time | date: '%Y' }} LANCA · {{ site.pi.name }}</p>
+  </div>
+</footer>

@@ -1,0 +1,77 @@
+---
+layout: default
+title: Home
+permalink: /
+---
+
+<section class="hero">
+  <p class="hero-eyebrow">Laboratory for Analytical and Computational Aerodynamics</p>
+  <h1 class="hero-title">Physics-based low-order modelling of unsteady fluid dynamics.</h1>
+  <p class="hero-lede">
+    LANCA is the research group of <a href="{{ site.pi.asu_profile }}">{{ site.pi.name }}</a>
+    in the {{ site.pi.affiliation }} at {{ site.pi.university }}. We develop theory and methods
+    for unsteady airfoil flows, vortex dynamics, and applications to novel air vehicles and
+    renewable energy.
+  </p>
+</section>
+
+<section class="highlights">
+  <div class="highlight">
+    <p class="highlight-label">Recent paper</p>
+    <p class="highlight-text">Correct wake vorticity shedding in time-stepping unsteady thin airfoil theory</p>
+    <p class="highlight-meta">AIAA Journal · 2025</p>
+  </div>
+  <div class="highlight">
+    <p class="highlight-label">Latest news</p>
+    <p class="highlight-text">New PhD students Saumya and Shengyinghao join LANCA</p>
+    <p class="highlight-meta">Fall 2025</p>
+  </div>
+  <div class="highlight">
+    <p class="highlight-label">Open positions</p>
+    <p class="highlight-text">PhD positions for Fall 2026 in vortex methods and ML</p>
+    <p class="highlight-meta"><a href="/join/">Learn more →</a></p>
+  </div>
+</section>
+
+<h2>Research</h2>
+<p>
+  Our broad aim is to leverage advances in theoretical aerodynamics, computing, and
+  scientific machine learning to better understand complex, nonlinear fluid phenomena,
+  and to develop engineering and design methodologies for the same. We work across
+  three connected threads:
+</p>
+
+<div class="research-theme">
+  <h3>Theory</h3>
+  <p>
+    Unsteady thin-airfoil theory, lifting-line methods, and matched asymptotic expansions
+    for problems where conventional steady aerodynamics breaks down.
+  </p>
+</div>
+
+<div class="research-theme">
+  <h3>Methods</h3>
+  <p>
+    Discrete-vortex models augmented with the leading-edge suction parameter (LESP),
+    open-source low-order solvers, and viscous–inviscid coupling for unsteady flows.
+  </p>
+</div>
+
+<div class="research-theme">
+  <h3>Applications</h3>
+  <p>
+    Flapping and perching micro air vehicles, vertical-axis wind turbines, flapping-foil
+    tidal energy harvesters, and aeroelastic flutter analysis.
+  </p>
+</div>
+
+<h2>Recent news</h2>
+<ul class="news-list">
+  {% assign sorted_news = site.news | sort: 'date' | reverse %}
+  {% for item in sorted_news limit:5 %}
+  <li class="news-item">
+    <span class="news-date">{{ item.date | date: "%b %Y" }}</span>
+    <div class="news-content">{{ item.content | markdownify | remove: '<p>' | remove: '</p>' }}</div>
+  </li>
+  {% endfor %}
+</ul>

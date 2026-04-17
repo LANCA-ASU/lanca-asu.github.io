@@ -1,0 +1,56 @@
+# ============================================================
+# Site settings
+# ============================================================
+title: LANCA
+subtitle: Laboratory for Analytical and Computational Aerodynamics
+description: >
+  Research group of Prof. Kiran Ramesh at Arizona State University.
+  We develop physics-based low-order models of unsteady fluid dynamics
+  for novel air vehicles and renewable energy systems.
+
+url: "https://lanca-asu.github.io"
+baseurl: ""
+
+pi:
+  name: Kiran Ramesh
+  title: Associate Professor
+  affiliation: School for Engineering of Matter, Transport and Energy
+  university: Arizona State University
+  email: kiran.ramesh@asu.edu
+  office: ERC 383, 551 E Tyler Mall, Tempe, AZ 85281
+  asu_profile: https://search.asu.edu/profile/1348363
+  google_scholar:
+  github:
+  orcid:
+
+# ============================================================
+# Build settings
+# ============================================================
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+timezone: America/Phoenix
+
+collections:
+  news:
+    output: false
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: default
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - node_modules
+  - README.md
+  - .gitignore
