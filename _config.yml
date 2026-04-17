@@ -47,6 +47,11 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+# Jekyll ignores folders starting with "_" by default. Force it to
+# process _pages so Research/People/Publications/Teaching/Join render.
+include:
+  - _pages
+
 exclude:
   - Gemfile
   - Gemfile.lock
